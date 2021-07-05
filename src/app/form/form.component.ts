@@ -12,13 +12,26 @@ export class FormComponent implements OnInit {
   constructor() { }
 
   getUserValue(data: any) {
-    console.log(data)
+    if(data==""){
+      alert("Please fill all field")
+    }
+    else{
+      alert("Form submitted successfully")
+  
+      console.log(data)
+  
+      localStorage.setItem("name", data.name)
+      localStorage.setItem("age", data.age)
+      localStorage.setItem("email", data.email)
+      localStorage.setItem("dob", data.dob)
+      data.value=""
+    }
+  
 
-    localStorage.setItem("name", data.name)
-    localStorage.setItem("age", data.age)
-    localStorage.setItem("email", data.email)
-    localStorage.setItem("dob", data.dob)
-
+  }
+  
+  resetfields($event:any){
+    console.log("reset button")
   }
 
   ngOnInit(): void {

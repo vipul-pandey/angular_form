@@ -6,9 +6,10 @@
             <div ng-view></div>
 
             <form #simpleForm="ngForm" name="myForm" novalidate (ngSubmit)="getUserValue(simpleForm.form.value)">
+                <!-- {{simpleForm.value | json}} -->
                 <h1>Form</h1>
                 <div>
-                    <input class="inputField" type="text" ngModel name="name" placeholder="Enter your name" required />
+                    <input class="inputField" type="text" ngModel name="name" value="name" placeholder="Enter your name" required />
                 </div>
 
                 <p ng-bind="name"></p>
@@ -26,7 +27,9 @@
                     <input class="inputField" type="date" ngModel name="dob" placeholder="Enter your dob" required />
                 </div>
                 <div>
-                    <Button class="btn">Submit</Button>
+                    <input class="btn" type="submit" value="Submit"/>
+                    <!-- <Button  class="btn">Submit</Button> -->
+                    
                 </div>
 
             </form>
