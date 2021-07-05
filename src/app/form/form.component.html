@@ -1,0 +1,37 @@
+<html>
+
+<body>
+    <div class="main-div">
+        <div class="center-div">
+            <div ng-view></div>
+
+            <form #simpleForm="ngForm" name="myForm" novalidate (ngSubmit)="getUserValue(simpleForm.form.value)">
+                <h1>Form</h1>
+                <div>
+                    <input class="inputField" type="text" ngModel name="name" placeholder="Enter your name" required />
+                </div>
+
+                <p ng-bind="name"></p>
+
+                <div>
+                    <input class="inputField" type="number" ngModel name="age" placeholder="Enter your age" required />
+                </div>
+
+                <div>
+                    <input class="inputField" type="email" ngModel name="email" placeholder="Enter your email"
+                        required />
+                </div>
+
+                <div>
+                    <input class="inputField" type="date" ngModel name="dob" placeholder="Enter your dob" required />
+                </div>
+                <div>
+                    <Button class="btn">Submit</Button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

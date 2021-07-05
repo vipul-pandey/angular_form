@@ -1,0 +1,17 @@
+table, th, td{
+    border: 1px solid rgb(8, 50, 165);
+}
+th, td{
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+th{
+    background-color: black;
+    color: whitesmoke;
+}
+
+td{
+    background-color: lightcyan;
+    color: darkgreen;
+}
